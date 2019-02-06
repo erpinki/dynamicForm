@@ -1,0 +1,8 @@
+<div 
+      class="dynamic-field form-button"
+      [formGroup]="group">
+      <i *ngIf="config.preFix" [ngClass]="config.preFixClass"></i>
+      <button [ngClass] ="config.controlClass" type="submit">
+        {{ config.label }} <i *ngIf="config.postFix" [ngClass]="config.postFixClass"></i>
+      </button>
+    </div>

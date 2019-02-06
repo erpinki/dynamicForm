@@ -1,0 +1,14 @@
+<div 
+class="dynamic-field form-input" 
+[formGroup]="group">
+<label [ngClass]="config.labelClass">{{config.label}}</label><br>
+<label  *ngFor="let item of config.options; let i = index">
+    <input type="checkbox" [value]="item.id" [ngClass]="config.controlClass">
+    {{item.name}}
+    <span *ngIf="item.checkList">
+    <ul *ngFor="let list of item.checkListOpt">
+      <li>{{list}}</li>
+    </ul>
+    </span>
+  </label>
+  </div>

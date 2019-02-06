@@ -1,0 +1,9 @@
+
+  <div class="container-fluid">
+     <div class="row">
+      <app-dynamicform *ngIf = "false" [config]='cabinetinfo' (submitted)="formSubmitted($event)"></app-dynamicform>
+      <app-dynamicform *ngIf = "false" [config]='carrierDetails' (submitted)="formSubmitted($event)"></app-dynamicform>
+      <app-dynamicform *ngIf = "true" [config]='cableDetails' (submitted)="formSubmitted($event)"></app-dynamicform>
+      <app-dynamicform *ngIf = "false" [config]='reviewConfirmDetails' (submitted)="formSubmitted($event)"></app-dynamicform>
+     </div>
+  </div>

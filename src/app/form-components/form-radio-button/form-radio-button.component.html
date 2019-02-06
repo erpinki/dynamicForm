@@ -1,0 +1,12 @@
+<div 
+class="dynamic-field form-input" 
+[formGroup]="group">
+<label [ngClass]="config.label.class">{{ config.label }}</label><br>
+<label *ngFor="let item of config.options">
+  <input type="radio" name="config.name" value="item.name" [ngClass]="config.controlClass" />{{item.name}} 
+  <span *ngIf="item.detailInfo">
+    {{item.details}}
+  </span>
+  <br>
+</label>
+</div>

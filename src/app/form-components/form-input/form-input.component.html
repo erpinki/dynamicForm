@@ -1,0 +1,9 @@
+<div 
+class="dynamic-field form-input" 
+[formGroup]="group">
+<label [ngClass]="config.labelClass">{{ config.label }}</label>
+<input 
+  type="text" [ngClass]="config.controlClass"
+  [attr.placeholder]="config.placeholder"
+  [formControlName]="config.name" />
+</div>
